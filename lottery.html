@@ -1,0 +1,601 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=1.0" name="viewport">
+<meta name="screen-orientation" content="portrait">
+<title>展翅开学礼HTML5</title>
+<link rel="stylesheet" type="text/css" href="css/index.css">
+<script type="text/javascript">
+	(function(doc, win){
+		var docEle = doc.documentElement,
+		resizeEvt = "orientationchange" in window ? "orientaitonchange" : 'resize',
+		rescale = function() {
+			var clientWidth = docEle.clientWidth;
+			if(!clientWidth) {
+				return;
+			}
+			docEle.style.fontSize = 20*(clientWidth/375) + 'px';
+		};
+		if (!doc.addEventListener) {
+			return;
+		}
+		win.addEventListener(resizeEvt, rescale, false);
+		doc.addEventListener("DOMContentLoaded", rescale, false);
+	})(document, window);
+</script>
+</head>
+<body>
+<div id="container" class="container">
+	<div class="lottery_page">
+		<div class="top_bar">
+			<span class="zc_btn"><img src="images/zc_btn.png" alt=""></span>
+			<a href="javascript:;" class="invited_sm"><img src="images/invite_sm.png" alt=""></a>
+		</div>
+		<div class="lottery_box">
+			<a href="javascript:;" class="playbtn"></a>
+		</div>
+		<div class="change_bar">
+			<div class="change">你还有6次抽奖机会</div>
+			<a href="javascript:;" class="j_view my_prize_btn"><img src="images/my_prize_btn.png" alt=""></a>
+		</div>
+		<div class="lottery_rule">
+			<img src="images/lottery_rules.png" alt="">
+		</div>
+		<div class="luck_notice">
+			<div class="notice_content">
+				<ul class="scroll">
+					<li>恭喜<span>Steven</span>获得<span>滴滴出行优惠券一张</span></li>
+					<li>恭喜<span>Alice</span>获得<span>联想笔记本一台</span></li>
+					<li>恭喜<span>你真是TM傻</span>获得<span>联想手机一部！</span></li>
+					<li>恭喜<span>陈秋依</span>获得<span>联想手机优惠券一张！</span></li>
+					<li>恭喜<span>罗秋秋</span>获得<span>展翅职场技能升级礼包一份！</span></li>
+					<li>恭喜<span>大虾米</span>获得<span>Kindle电子书阅读器！</span></li>
+					<li>恭喜<span>Steven</span>获得<span>滴滴打车券一张</span></li>
+				</ul>
+			</div>
+		</div>
+		<!--分享提示-->
+		<div class="share_page">
+			<div class="share_png"></div>
+		</div>
+	</div>
+	<div class="prize_page">
+		<div class="prize_list">
+			<span class="closeIcon"></span>
+			<div class="award_list">
+				<dl>
+					<dt><img src="images/award01.png" alt=""></dt>
+					<dd>
+						<h3>联想S41-70 14寸i5超薄笔记本电脑 </h3>
+					</dd>
+					<dd class="ticket">
+						<div class="ticket_tags">LX0911</div>
+						<span>兑换码</span>
+					</dd>
+				</dl>
+				<dl>
+					<dt><img src="images/award02.png" alt=""></dt>
+					<dd>
+						<h3>展翅职场技能提升礼包</h3>
+						<p>有效期：2016年9月30日</p>
+					</dd>
+					<dd class="ticket">
+						<div class="ticket_tags">ZC1221</div>
+						<span>兑换码</span>
+					</dd>
+				</dl>
+				<dl>
+					<dt><img src="images/award03.png" alt=""></dt>
+					<dd>
+						<h3>Kindle阅读器</h3>
+						<p>有效期：2016年9月30日</p>
+					</dd>
+					<dd class="ticket">
+						<div class="ticket_tags">KD0405</div>
+						<span>兑换码</span>
+					</dd>
+				</dl>
+				<dl>
+					<dt><img src="images/award04.png" alt=""></dt>
+					<dd>
+						<h3>联想ZUK Z2手机 </h3>
+						<p>有效期：2016年9月30日</p>
+					</dd>
+					<dd class="ticket">
+						<div class="ticket_tags">LX1212 </div>
+						<span>兑换码</span>
+					</dd>
+				</dl>
+				<dl>
+					<dt><img src="images/award05.png" alt=""></dt>
+					<dd>
+						<h3>滴滴出行优惠券</h3>
+						<p>有效期：2016年9月30日</p>
+					</dd>
+				</dl>
+				<dl>
+					<dt><img src="images/award06.png" alt=""></dt>
+					<dd>
+						<h3>可得眼镜护眼礼包</h3>
+						<p>有效期：2016年9月30日</p>
+					</dd>
+				</dl>
+				<dl>
+					<dt><img src="images/award07.png" alt=""></dt>
+					<dd>
+						<h3>联想手机优惠券</h3>
+						<p>有效期：2016年9月30日</p>
+					</dd>
+					<dd class="ticket">
+						<button class="see_btn">查看</button>
+					</dd>
+				</dl>
+			</div>
+		</div>
+	</div>
+	<!--查看联想优惠券-->
+	<div class="lenovo_page">
+		<div class="lenovo_award">
+			<span class="md_close"></span>
+			<div class="award_pic"><img src="images/award_computer.png" alt=""></div>
+			<p class="award_text">联想手机优惠券</p>
+			<div class="discount_content">
+				<dl>
+					<dt>使用规则：</dt>
+					<dd>凭此优惠券截图，去指定门店购买联想ZUK Z2手机，立减100元！</dd>
+				</dl>
+				<dl>
+					<dt>使用期限：</dt>
+					<dd>9月31日截止</dd>
+				</dl>
+				<dl>
+					<dt>适用门店：</dt>
+					<dd>
+						<div class="discount_limit">
+							<p>苏宁广州康王中路店</p>
+							<p>广州中域越秀二十二号店</p>
+							<p>广州中域越秀二十二号店</p>
+							<p>广州中域越秀二十二号店</p>
+							<p>苏宁广州同和太阳城店</p>
+							<p>苏宁广州新市二店</p>
+							<p>苏宁广州丽影广场店</p>
+							<p>苏宁广州车陂苏宁生活广场店</p>
+							<p>苏宁广州达镖国际店</p>
+							<p>苏宁广州金沙洲店</p>
+							<p>苏宁广州前进路店</p>
+							<p>广州海珠江南西联想3C体验店</p>
+							<p>广州市中域海珠3号店</p>
+							<p>联想广东省广州市天河区天河路200号中怡时尚购物中心专卖店</p>
+							<p>苏宁广州正佳店</p>
+							<p>苏宁广州从化店</p>
+							<p>中域广州越秀二十号</p>
+							<p>苏宁电器（奥体中心店）</p>
+							<p>苏宁广州区庄店</p>
+							<p>苏宁花都龙珠店</p>
+							<p>苏宁广州洛溪新城店</p>
+							<p>广州市百脑汇联想3C体验店</p>
+							<p>苏宁广州客村店</p>
+							<p>苏宁广州苏宁萝岗万达店</p>
+							<p>苏宁深圳华强北群星广场店</p>
+							<p>中域深圳龙华观澜章阁中港星商业广场店</p>
+							<p>中域深圳宝安观澜大道二店</p>
+							<p>苏宁深圳石岩宝石南路店</p>
+							<p>苏宁南山学府店</p>
+							<p>中域深圳西乡荔园路店</p>
+							<p>苏宁深圳东门店</p>
+							<p>苏宁南山天利店</p>
+							<p>苏宁深圳沙井万佳店</p>
+							<p>中域深圳福田华强北店</p>
+							<p>苏宁深圳沙井万佳店</p>
+							<p>苏宁深圳公明建设路店</p>
+							<p>苏宁龙岗店</p>
+							<p>苏宁深圳沙井市民广场店</p>
+							<p>苏宁深圳西乡大道圣淘沙店</p>
+							<p>苏宁深圳民治星河盛世店</p>
+							<p>苏宁深圳创业二路店</p>
+							<p>苏宁深圳华强北群星广场店</p>
+							<p>苏宁龙岗店</p>
+							<p>苏宁深圳宝安金港华庭店</p>
+							<p>苏宁深圳金龙华广场店</p>
+							<p>苏宁龙岗世贸店</p>
+							<p>苏宁南山前海店</p>
+							<p>中域深圳西乡七号店</p>
+							<p>中域深圳松岗星港城店</p>
+							<p>苏宁横岗志健店</p>
+							<p>苏宁深圳金龙华广场店</p>
+							<p>联想深圳KKONEPC店</p>
+							<p>联想深圳缤纷城PC店</p>
+							<p>中域肇庆黄冈河旁路店</p>
+							<p>中域中山坦洲坦神北路店</p>
+							<p>中域东莞(直营)桥头十二号</p>
+							<p>中域东莞(直营)常平桥头十一号</p>
+							<p>中域东莞(直营)常平茶山一号</p>
+							<p>东莞市苏宁清溪店</p>
+							<p>苏宁东莞南城鸿福路店</p>
+							<p>中域东莞(直营)虎门四十号店</p>
+							<p>苏宁佛山祖庙路旗舰店</p>
+							<p>中域佛山南海黄岐鄱阳路店</p>
+							<p>苏宁佛山祖庙路旗舰店</p>
+							<p>苏宁佛山南海嘉洲广场店</p>
+							<p>中域清远英德英诚富强路店</p>
+							<p>中域汕头金平一号店</p>
+							<p>中域肇庆黄冈河旁路店</p>
+							<p>中域中山坦洲坦神北路店</p>
+							<p>苏宁柳州谷埠街店</p>
+							<p>苏宁南宁朝阳店</p>
+							<p>中域电讯玉林东门店</p>
+						</div>
+					</dd>
+				</dl>
+			</div>
+		</div>
+	</div>
+	<!--中奖结果页面-->
+	<div id="none" class="award_page">
+		<div class="none_award">
+			<span class="close"></span>
+			<p>金盘洗手，换个姿势再抽一次</p>
+			<div class="lottery_btn">
+				<button class="more_btn md_btn"></button>
+				<button class="invited_btn md_btn"></button>
+			</div>
+		</div>
+	</div>
+	<!--滴滴打车优惠券-->
+	<div id="didi" class="award_page">
+		<div class="md_award">
+			<span class="close"></span>
+			<div class="award_pic"><img src="images/award_didi.png" alt=""></div>
+			<p class="award_text">滴滴出行优惠券</p>
+			<a href="javascript:;" class="get_award_btn"></a>
+		</div>
+	</div>
+	<!--可得眼镜护眼礼包-->
+	<div id="kede" class="award_page">
+		<div class="md_award">
+			<span class="close"></span>
+			<div class="award_pic"><img src="images/award_kede.png" alt=""></div>
+			<p class="award_text">可得眼镜护眼礼包</p>
+			<a href="javascript:;" class="get_award_btn"></a>
+		</div>
+	</div>
+	<!--展翅礼包-->
+	<div id="zc_gift" class="award_page">
+		<div class="lg_award">
+			<span class="lg_close"></span>
+			<div class="award_pic"><img src="images/award_zc.png" alt=""></div>
+			<p class="award_text">展翅职场技能提升礼包</p>
+			<form action="" method="post" class="submit_form">
+				<input type="number" class="phone_input" placeholder="请输入您的手机号码">
+				<div class="row">奖品兑换码：5476558xdgwgfsa</div>
+				<span><img src="images/get_tips.png" alt=""></span>
+				<button type="submit" class="subbtn"></button>
+			</form>
+		</div>
+	</div>
+	<!--联想ZUK Z2手机-->
+	<div id="lenovo_phone" class="award_page">
+		<div class="lg_award">
+			<span class="lg_close"></span>
+			<div class="award_pic"><img src="images/award_phone.png" alt=""></div>
+			<p class="award_text">联想ZUK Z2手机</p>
+			<form action="" method="post" class="submit_form">
+				<input type="number" class="phone_input" placeholder="请输入您的手机号码">
+				<div class="row">奖品兑换码：fdggftet14574875</div>
+				<span><img src="images/get_tips.png" alt=""></span>
+				<button type="submit" class="subbtn"></button>
+			</form>
+		</div>
+	</div>
+	<!--亚马逊Kindle阅读器-->
+	<div id="Kindle" class="award_page">
+		<div class="lg_award">
+			<span class="lg_close"></span>
+			<div class="award_pic"><img src="images/award_kindle.png" alt=""></div>
+			<p class="award_text">亚马逊Kindle阅读器</p>
+			<form action="" method="post" class="submit_form">
+				<input type="number" class="phone_input" placeholder="请输入您的手机号码">
+				<div class="row">奖品兑换码：wocaonimei14574875</div>
+				<span><img src="images/get_tips.png" alt=""></span>
+				<button type="submit" class="subbtn"></button>
+			</form>
+		</div>
+	</div>
+	<!--笔记本电脑-->
+	<div id="computer" class="award_page">
+		<div class="lg_award">
+			<span class="lg_close"></span>
+			<div class="award_pic"><img src="images/award_computer.png" alt=""></div>
+			<p class="award_text">笔记本电脑</p>
+			<form action="" method="post" class="submit_form">
+				<input type="number" class="phone_input" placeholder="请输入您的手机号码">
+				<div class="row">奖品兑换码：okejrfqgd14574875</div>
+				<span><img src="images/get_tips.png" alt=""></span>
+				<button type="submit" class="subbtn"></button>
+			</form>
+		</div>
+	</div>
+	<!--联想手机优惠券-->
+	<div id="discount" class="award_page">
+		<div class="lg_award">
+			<span class="lg_close"></span>
+			<div class="award_pic"><img src="images/award_computer.png" alt=""></div>
+			<p class="award_text">联想手机优惠券</p>
+			<div class="discount_content">
+				<dl>
+					<dt>使用规则：</dt>
+					<dd>凭此优惠券截图，去指定门店购买联想ZUK Z2手机，立减100元！</dd>
+				</dl>
+				<dl>
+					<dt>使用期限：</dt>
+					<dd>9月31日截止</dd>
+				</dl>
+				<dl>
+					<dt>适用门店：</dt>
+					<dd>
+						<div class="discount_limit">
+							<p>苏宁广州康王中路店</p>
+							<p>广州中域越秀二十二号店</p>
+							<p>广州中域越秀二十二号店</p>
+							<p>广州中域越秀二十二号店</p>
+							<p>苏宁广州同和太阳城店</p>
+							<p>苏宁广州新市二店</p>
+							<p>苏宁广州丽影广场店</p>
+							<p>苏宁广州车陂苏宁生活广场店</p>
+							<p>苏宁广州达镖国际店</p>
+							<p>苏宁广州金沙洲店</p>
+							<p>苏宁广州前进路店</p>
+							<p>广州海珠江南西联想3C体验店</p>
+							<p>广州市中域海珠3号店</p>
+							<p>联想广东省广州市天河区天河路200号中怡时尚购物中心专卖店</p>
+							<p>苏宁广州正佳店</p>
+							<p>苏宁广州从化店</p>
+							<p>中域广州越秀二十号</p>
+							<p>苏宁电器（奥体中心店）</p>
+							<p>苏宁广州区庄店</p>
+							<p>苏宁花都龙珠店</p>
+							<p>苏宁广州洛溪新城店</p>
+							<p>广州市百脑汇联想3C体验店</p>
+							<p>苏宁广州客村店</p>
+							<p>苏宁广州苏宁萝岗万达店</p>
+							<p>苏宁深圳华强北群星广场店</p>
+							<p>中域深圳龙华观澜章阁中港星商业广场店</p>
+							<p>中域深圳宝安观澜大道二店</p>
+							<p>苏宁深圳石岩宝石南路店</p>
+							<p>苏宁南山学府店</p>
+							<p>中域深圳西乡荔园路店</p>
+							<p>苏宁深圳东门店</p>
+							<p>苏宁南山天利店</p>
+							<p>苏宁深圳沙井万佳店</p>
+							<p>中域深圳福田华强北店</p>
+							<p>苏宁深圳沙井万佳店</p>
+							<p>苏宁深圳公明建设路店</p>
+							<p>苏宁龙岗店</p>
+							<p>苏宁深圳沙井市民广场店</p>
+							<p>苏宁深圳西乡大道圣淘沙店</p>
+							<p>苏宁深圳民治星河盛世店</p>
+							<p>苏宁深圳创业二路店</p>
+							<p>苏宁深圳华强北群星广场店</p>
+							<p>苏宁龙岗店</p>
+							<p>苏宁深圳宝安金港华庭店</p>
+							<p>苏宁深圳金龙华广场店</p>
+							<p>苏宁龙岗世贸店</p>
+							<p>苏宁南山前海店</p>
+							<p>中域深圳西乡七号店</p>
+							<p>中域深圳松岗星港城店</p>
+							<p>苏宁横岗志健店</p>
+							<p>苏宁深圳金龙华广场店</p>
+							<p>联想深圳KKONEPC店</p>
+							<p>联想深圳缤纷城PC店</p>
+							<p>中域肇庆黄冈河旁路店</p>
+							<p>中域中山坦洲坦神北路店</p>
+							<p>中域东莞(直营)桥头十二号</p>
+							<p>中域东莞(直营)常平桥头十一号</p>
+							<p>中域东莞(直营)常平茶山一号</p>
+							<p>东莞市苏宁清溪店</p>
+							<p>苏宁东莞南城鸿福路店</p>
+							<p>中域东莞(直营)虎门四十号店</p>
+							<p>苏宁佛山祖庙路旗舰店</p>
+							<p>中域佛山南海黄岐鄱阳路店</p>
+							<p>苏宁佛山祖庙路旗舰店</p>
+							<p>苏宁佛山南海嘉洲广场店</p>
+							<p>中域清远英德英诚富强路店</p>
+							<p>中域汕头金平一号店</p>
+							<p>中域肇庆黄冈河旁路店</p>
+							<p>中域中山坦洲坦神北路店</p>
+							<p>苏宁柳州谷埠街店</p>
+							<p>苏宁南宁朝阳店</p>
+							<p>中域电讯玉林东门店</p>
+						</div>
+					</dd>
+				</dl>
+			</div>
+			<!-- <a href="javascript:;" class="get_award_btn"></a> -->
+		</div>
+	</div>
+	<!--当自己的抽奖机会用完的时候就把这个页面显示出来-->
+	<div class="none_page">
+		<img src="images/none_change.png" alt="">
+	</div>
+	<!--6次抽奖次数都用完-->
+	<div class="use_out_page">
+		<div class="out_tips">
+			<span class="close"></span>
+			<p>您的6次抽奖次数已用完 , 没抽到大奖不灰心，关注“<span class="c_fff">吴聊职场</span>”公众号, 还有更多精彩内容值得您的关注！</p>
+			<img src="images/weixin_code.png" class="weixin_pic" alt="">
+			<p class="t_center">长按二维码识别</p>
+		</div>
+	</div>
+</div>
+<script type="text/javascript" src="js/zepto.min.js"></script>
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<script type="text/javascript" src="js/jquery.rotate.min.js"></script>
+<script type="text/javascript">
+	
+	$(function() {
+		//抽奖
+		var playBtn = $(".playbtn");
+		var isTrue = 0;
+		var clickFunc = function() {
+			var data = [1,2,3,4,5,6,7,8];
+			//data为随机出来的结果，根据概率后的结果，概率由后台控制
+			data = data[Math.floor(Math.random() * data.length)];
+			switch(data) {
+				case 1:
+				rotateFunc(1, 0, function() {
+					$("#Kindle").show();
+					closePage();
+				});
+				break;
+				case 2:
+				rotateFunc(2, 45, function() {
+					$("#none").show();
+					closePage();
+				});
+				break;
+				case 3:
+				rotateFunc(3, 90, function() {
+					$("#computer").show();
+					closePage();
+				});
+				break;
+				case 4:
+				rotateFunc(4, 135, function() {
+					$("#lenovo_phone").show();
+					closePage();
+				});
+				break;
+				case 5:
+				rotateFunc(5, 180, function() {
+					$("#kede").show();
+					closePage();
+				});
+				break;
+				case 6:
+				rotateFunc(6, 225, function() {
+					$("#discount").show();
+					closePage();
+				});
+				break;
+				case 7:
+				rotateFunc(7, 270, function() {
+					$("#zc_gift").show();
+					closePage();
+				});
+				break;
+				case 8:
+				rotateFunc(8, 315, function(){
+					$("#didi").show();
+					closePage();
+				});
+				break;
+			}
+		}
+
+		playBtn.on("click", function() {
+			if (isTrue) return; //判断如果正在执行，就退出
+			isTrue = true;
+			clickFunc();
+		});
+
+		var rotateFunc = function(award, angle, fn) {
+			isTrue = true;
+			playBtn.stopRotate();
+			playBtn.rotate({
+				angle: 0,
+				duration: 4000, //旋转时间
+				animateTo: angle + 1462.5, //让他根据得出来的结果加上1440°旋转
+				callback: function() {
+					isTrue = false;
+					fn();
+				}
+			});
+		}
+		//中奖公告
+		var scrollWrapper = $(".scroll"), scrollItem = scrollWrapper.find("li"), 
+			itemWidth = scrollItem.width(), len = scrollItem.length, 
+			totalWidth = itemWidth * len;
+		var speed = 0;
+		var timer = setInterval(function() {
+	        speed++;
+	        if(speed === totalWidth) {
+	        	speed = 0;
+	        	scrollWrapper.css({
+		            'width': totalWidth,
+		            'left': 0
+		        });
+	        }
+	        scrollWrapper.css({
+	            'width': totalWidth,
+	            'left': -speed
+	        });
+	    }, 50);
+
+
+		//再抽一次
+		$(".more_btn").on("click", function() {
+			$(this).parents(".award_page").hide();
+		});
+
+		//查看我的奖品
+		$(".j_view").on("click", function(event) {
+			event.stopPropagation();
+			$(".prize_page").show();
+			$(".closeIcon").on("click", function() {
+				$(".prize_page").hide();
+			})
+		});
+		$(".see_btn").on("click", function() {
+			$(".lenovo_page").show();
+		});
+		$(".md_close").on("click", function() {
+			$(".lenovo_page").hide();
+		});
+
+		//微信去分享
+		$(".invited_btn").on("click", function() {
+			$(".share_page").show();
+			$(".share_page").on("click", function()　{
+				$(this).hide();
+			})
+		});
+		$(".invited_sm").on("click", function(event) {
+			event.stopPropagation();
+			$(".share_page").show();
+			$(".share_page").on("click", function()　{
+				$(this).hide();
+			})
+		});
+		//关闭弹出层
+		$(".close").on("click", function() {
+			$(".use_out_page").hide();
+		})
+
+		//关闭
+		function closePage () {
+			$(".close").on("click", function() {
+				$(this).parents(".award_page").hide();
+			});
+			$(".lg_close").on("click", function() {
+				$(this).parents(".award_page").hide();
+			});
+		}
+
+		$(".submit_form").submit(function() {
+			var reg = /^1[3|4|5|7|8]\d{9}$/;
+			var phone = $(this).find(".phone_input").val();
+			if(!reg.test($.trim(phone))) {
+				$(".phone_input").focus().css('border-color', 'red');
+				setTimeout(function() {
+					$(".phone_input").css('border-color', 'black');
+				}, 1000);
+				return false;
+			}else {
+				return true;
+			}
+		});
+	});
+</script>
+</body>
+</html>

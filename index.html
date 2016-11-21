@@ -1,0 +1,539 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=1.0" name="viewport">
+<meta name="screen-orientation" content="portrait">
+<title>展翅开学礼HTML5</title>
+<link rel="stylesheet" type="text/css" href="css/index.css">
+<script type="text/javascript">
+	(function(doc, win){
+		var docEle = doc.documentElement,
+		resizeEvt = "orientationchange" in window ? "orientaitonchange" : 'resize',
+		rescale = function() {
+			var clientWidth = docEle.clientWidth;
+			if(!clientWidth) {
+				return;
+			}
+			docEle.style.fontSize = 20*(clientWidth/375) + 'px';
+		};
+		if (!doc.addEventListener) {
+			return;
+		}
+		win.addEventListener(resizeEvt, rescale, false);
+		doc.addEventListener("DOMContentLoaded", rescale, false);
+	})(document, window);
+</script>
+<script type="text/javascript" src="js/zepto.min.js"></script>
+</head>
+<body>
+<!--loading页面-->
+<div id="loading" class="loading">
+	<div class="loader">
+		<div class="loader1">
+			<span></span>
+			<span></span>
+			<span></span>
+			<span></span>
+			<span></span>
+		</div>
+		<span id="percent" class="percent"></span>
+	</div>
+</div>
+<audio id="cartoon_music" src="images/cartoon.mp3" loop></audio>
+<audio id="game_music" src="images/game.mp3" loop></audio>
+<audio id="bomb" src="images/err.wav"></audio>
+<div id="container" class="container">
+	<div id="index" class="index_page hide">
+		<div class="top">
+			<img src="images/star01.png" class="star01" alt="">
+			<img src="images/star02.png" class="star02" alt="">
+			<img src="images/star03.png" class="star03" alt="">
+			<img src="images/star04.png" class="star04" alt="">
+			<img src="images/top.png" alt="">
+		</div>
+		<div class="cartoon clearfix">
+			<div class="cartoon_page">
+				<div class="cartoon_tpl tpl_l1 animate_l1"></div>
+				<div class="cartoon_tpl tpl_r1 animate_r1"></div>
+				<div class="cartoon_tpl tpl_l2 animate_l2"></div>
+				<div class="cartoon_tpl tpl_r2 animate_r2"></div>				
+			</div>						
+		</div>
+		<div class="larger_btn">
+			<button class="resetBtn"></button>
+		</div>
+		<div class="zc_logo fadeInUp"><img src="images/zc_logo.png" alt=""></div>
+		<div class="finger fingerAni"></div>	
+	</div>
+	<!--任务清单页面-->
+	<div id="first_duty" class="duty_page hide">
+		<div class="sponsorList">
+			<ul>
+				<li><img src="images/sponsor01.png" alt=""></li>
+				<li><img src="images/sponsor02.png" alt=""></li>
+				<li><img src="images/sponsor03.png" alt=""></li>
+				<li><img src="images/sponsor04.png" alt=""></li>
+				<li><img src="images/sponsor05.png" alt=""></li>
+			</ul>
+		</div>
+		<div class="duty_content first_content">
+			<img src="images/duty_list.png" class="duty_list" alt="">
+		</div>
+		<div class="btnBar">
+			<a href="javascript:;" class="startGame btn"><img src="images/start_btn.png" alt=""></a>
+			<a href="javascript:;" class="gameRule btn"><img src="images/rules_btn.png" alt=""></a>
+		</div>
+		<div class="zc_logo"><img src="images/zc_logo.png" alt=""></div>
+		<div class="rule_page">
+			<div class="rule_content"><span class="closeBtn"></span><img src="images/gameRule_bg.png" alt=""></div>
+		</div>
+	</div>
+	<!--第二次进入页面-->
+	<div id="second_duty" class="duty_page hide">
+		<div class="sponsorList">
+			<ul>
+				<li><img src="images/sponsor01.png" alt=""></li>
+				<li><img src="images/sponsor02.png" alt=""></li>
+				<li><img src="images/sponsor03.png" alt=""></li>
+				<li><img src="images/sponsor04.png" alt=""></li>
+				<li><img src="images/sponsor05.png" alt=""></li>
+			</ul>
+		</div>
+		<div class="duty_content">
+			<div class="my_list">
+				<div class="my_duty_list">
+					<div class="list_item item01 on"><span class="status"></span></div>
+					<div class="list_item item02 on"><span class="status"></span></div>
+					<div class="list_item item03 on"><span class="status"></span></div>
+					<div class="list_item item04"><span class="status"></span></div>
+					<div class="list_item item05"><span class="status"></span></div>
+					<div class="list_item item06"><span class="status"></span></div>
+				</div>
+			</div>
+		</div>
+		<div class="btnBar">
+			<a href="javascript:;" class="j_view btn"><img src="images/view_btn.png" alt=""></a>
+			<a href="javascript:;" class="startGame btn"><img src="images/again_btn.png" alt=""></a>
+		</div>
+		<div class="lg_get_prize">
+			<a href="javascript:;" id="goprice"><img src="images/go_btn.png" alt=""></a>
+			<span class="num">2</span>
+		</div>
+		<div class="zc_logo"><img src="images/zc_logo.png" alt=""></div>
+		<div class="prize_page">
+			<div class="prize_list">
+				<span class="closeIcon"></span>
+				<div class="award_list">
+					<dl>
+						<dt><img src="images/award01.png" alt=""></dt>
+						<dd>
+							<h3>联想S41-70 14寸i5超薄笔记本电脑 </h3>
+						</dd>
+						<dd class="ticket">
+							<div class="ticket_tags">LX0911</div>
+							<span>兑换码</span>
+						</dd>
+					</dl>
+					<dl>
+						<dt><img src="images/award02.png" alt=""></dt>
+						<dd>
+							<h3>展翅职场技能提升礼包</h3>
+							<p>有效期：2016年9月30日</p>
+						</dd>
+						<dd class="ticket">
+							<div class="ticket_tags">ZC1221</div>
+							<span>兑换码</span>
+						</dd>
+					</dl>
+					<dl>
+						<dt><img src="images/award03.png" alt=""></dt>
+						<dd>
+							<h3>Kindle阅读器</h3>
+							<p>有效期：2016年9月30日</p>
+						</dd>
+						<dd class="ticket">
+							<div class="ticket_tags">KD0405</div>
+							<span>兑换码</span>
+						</dd>
+					</dl>
+					<dl>
+						<dt><img src="images/award04.png" alt=""></dt>
+						<dd>
+							<h3>联想ZUK Z2手机 </h3>
+							<p>有效期：2016年9月30日</p>
+						</dd>
+						<dd class="ticket">
+							<div class="ticket_tags">LX1212 </div>
+							<span>兑换码</span>
+						</dd>
+					</dl>
+					<dl>
+						<dt><img src="images/award05.png" alt=""></dt>
+						<dd>
+							<h3>滴滴打车优惠券</h3>
+							<p>有效期：2016年9月30日</p>
+						</dd>
+					</dl>
+					<dl>
+						<dt><img src="images/award06.png" alt=""></dt>
+						<dd>
+							<h3>可得眼镜护眼礼包</h3>
+							<p>有效期：2016年9月30日</p>
+						</dd>
+					</dl>
+					<dl>
+						<dt><img src="images/award07.png" alt=""></dt>
+						<dd>
+							<h3>联想手机优惠券</h3>
+							<p>有效期：2016年9月30日</p>
+						</dd>
+						<dd class="ticket">
+							<button class="see_btn">查看</button>
+						</dd>
+					</dl>
+				</div>
+			</div>
+		</div>
+		<!--查看联想优惠券-->
+		<div class="lenovo_page">
+			<div class="lenovo_award">
+				<span class="md_close"></span>
+				<div class="award_pic"><img src="images/award_computer.png" alt=""></div>
+				<p class="award_text">联想手机优惠券</p>
+				<div class="discount_content">
+					<dl>
+						<dt>使用规则：</dt>
+						<dd>凭此优惠券截图，去指定门店购买联想ZUK Z2手机，立减100元！</dd>
+					</dl>
+					<dl>
+						<dt>使用期限：</dt>
+						<dd>9月31日截止</dd>
+					</dl>
+					<dl>
+						<dt>适用门店：</dt>
+						<dd>
+							<div class="discount_limit">
+								<p>苏宁广州康王中路店</p>
+								<p>广州中域越秀二十二号店</p>
+								<p>广州中域越秀二十二号店</p>
+								<p>广州中域越秀二十二号店</p>
+								<p>苏宁广州同和太阳城店</p>
+								<p>苏宁广州新市二店</p>
+								<p>苏宁广州丽影广场店</p>
+								<p>苏宁广州车陂苏宁生活广场店</p>
+								<p>苏宁广州达镖国际店</p>
+								<p>苏宁广州金沙洲店</p>
+								<p>苏宁广州前进路店</p>
+								<p>广州海珠江南西联想3C体验店</p>
+								<p>广州市中域海珠3号店</p>
+								<p>联想广东省广州市天河区天河路200号中怡时尚购物中心专卖店</p>
+								<p>苏宁广州正佳店</p>
+								<p>苏宁广州从化店</p>
+								<p>中域广州越秀二十号</p>
+								<p>苏宁电器（奥体中心店）</p>
+								<p>苏宁广州区庄店</p>
+								<p>苏宁花都龙珠店</p>
+								<p>苏宁广州洛溪新城店</p>
+								<p>广州市百脑汇联想3C体验店</p>
+								<p>苏宁广州客村店</p>
+								<p>苏宁广州苏宁萝岗万达店</p>
+								<p>苏宁深圳华强北群星广场店</p>
+								<p>中域深圳龙华观澜章阁中港星商业广场店</p>
+								<p>中域深圳宝安观澜大道二店</p>
+								<p>苏宁深圳石岩宝石南路店</p>
+								<p>苏宁南山学府店</p>
+								<p>中域深圳西乡荔园路店</p>
+								<p>苏宁深圳东门店</p>
+								<p>苏宁南山天利店</p>
+								<p>苏宁深圳沙井万佳店</p>
+								<p>中域深圳福田华强北店</p>
+								<p>苏宁深圳沙井万佳店</p>
+								<p>苏宁深圳公明建设路店</p>
+								<p>苏宁龙岗店</p>
+								<p>苏宁深圳沙井市民广场店</p>
+								<p>苏宁深圳西乡大道圣淘沙店</p>
+								<p>苏宁深圳民治星河盛世店</p>
+								<p>苏宁深圳创业二路店</p>
+								<p>苏宁深圳华强北群星广场店</p>
+								<p>苏宁龙岗店</p>
+								<p>苏宁深圳宝安金港华庭店</p>
+								<p>苏宁深圳金龙华广场店</p>
+								<p>苏宁龙岗世贸店</p>
+								<p>苏宁南山前海店</p>
+								<p>中域深圳西乡七号店</p>
+								<p>中域深圳松岗星港城店</p>
+								<p>苏宁横岗志健店</p>
+								<p>苏宁深圳金龙华广场店</p>
+								<p>联想深圳KKONEPC店</p>
+								<p>联想深圳缤纷城PC店</p>
+								<p>中域肇庆黄冈河旁路店</p>
+								<p>中域中山坦洲坦神北路店</p>
+								<p>中域东莞(直营)桥头十二号</p>
+								<p>中域东莞(直营)常平桥头十一号</p>
+								<p>中域东莞(直营)常平茶山一号</p>
+								<p>东莞市苏宁清溪店</p>
+								<p>苏宁东莞南城鸿福路店</p>
+								<p>中域东莞(直营)虎门四十号店</p>
+								<p>苏宁佛山祖庙路旗舰店</p>
+								<p>中域佛山南海黄岐鄱阳路店</p>
+								<p>苏宁佛山祖庙路旗舰店</p>
+								<p>苏宁佛山南海嘉洲广场店</p>
+								<p>中域清远英德英诚富强路店</p>
+								<p>中域汕头金平一号店</p>
+								<p>中域肇庆黄冈河旁路店</p>
+								<p>中域中山坦洲坦神北路店</p>
+								<p>苏宁柳州谷埠街店</p>
+								<p>苏宁南宁朝阳店</p>
+								<p>中域电讯玉林东门店</p>
+							</div>
+						</dd>
+					</dl>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!--游戏页面-->
+	<div class="guidepanel">
+		<img src="images/gameRules.png" id="gameGuide" alt="">
+	</div>
+	<div id="gamepanel">
+        <div class="time_limit"></div>
+		<div class="score-wrap">
+            <span id="score">0</span>
+        </div>
+		<canvas id="stage"></canvas>
+	</div>
+	<!--首次玩游戏结果页面-->
+	<div id="gameoverPanel">
+		<div class="result_failed">
+			<div class="failed"></div>
+			<a href="javascript:;" class="replay_btn"><img src="images/replay_btn.png" alt=""></a>
+		</div>
+		<div class="result_success">
+			<div class="success"></div>
+			<a href="lottery.html" class="get_prize"><img src="images/get_prize_btn.png" alt=""></a>
+		</div>
+	</div>
+	<!--第二次玩没有去抽奖结果页面-->
+	<!-- <div id="gameoverPanel">
+		<div class="result_failed">
+			<div class="failed failed2"></div>
+			<div class="failed_btn">
+				<a href="javascript:;" class="replay_btn try_btn"><img src="images/try_btn.png" alt=""></a>
+				<a href="javascript:;" class="back_btn"><img src="images/back_btn.png" alt=""></a>
+			</div>
+		</div>
+		<div class="result_success">
+			<div class="success success2"></div>
+			<div class="success_btn">
+				<a href="javascript:;" class="replay_btn continue_btn"><img src="images/continue_btn.png" alt=""></a>
+				<a href="javascript:;" class="back_btn"><img src="images/back_btn.png" alt=""></a>
+			</div>
+		</div>
+	</div> -->
+	<!--0次抽奖机会，点击后显示出来-->
+	<div class="none_page">
+		<img src="images/none_change.png" alt="">
+	</div>
+	<!--6次抽奖次数都用完-->
+	<div class="use_out_page">
+		<div class="out_tips">
+			<span class="close"></span>
+			<p>您的6次抽奖次数已用完 , 没抽到大奖不灰心，关注“<span class="c_fff">吴聊职场</span>”公众号, 还有更多精彩内容值得您的关注！</p>
+			<img src="images/weixin_code.png" class="weixin_pic" alt="">
+			<p class="t_center">长按二维码识别</p>
+		</div>
+	</div>
+	<!--分享获得多一次机会-->
+	<div class="get_change_page">
+		<img src="images/more_change.png" alt="">
+	</div>
+</div>	
+<script type="text/javascript" src="js/game.js"></script>
+<script type="text/javascript">
+	$(function() {
+		var imgArr = [
+			'images/top.png',
+			'images/picture01.png',
+			'images/picture02.png',
+			'images/picture03.png',
+			'images/picture04.png',
+			'images/larger_btn.png',
+			'images/finger.png',
+			'images/award01.png',
+			'images/award02.png',
+			'images/award03.png',
+			'images/award04.png',
+			'images/award05.png',
+			'images/award06.png',
+			'images/award07.png',
+			'images/zc_logo.png',
+			'images/common_bg.png',
+			'images/bg.jpg',
+			'images/duty_list.png',
+			'images/goods0.png',
+			'images/goods1.png',
+			'images/goods2.png',
+			'images/goods3.png',
+			'images/goods4.png',
+			'images/goods5.png',
+			'images/sponsor01.png',
+			'images/sponsor02.png',
+			'images/sponsor03.png',
+			'images/sponsor04.png',
+			'images/sponsor05.png',
+			'images/player.png',
+			'images/bomb.png',
+			'images/start_btn.png',
+			'images/rules_btn.png',
+			'images/scorebg.png',
+			'images/timebg.png',
+			'images/failed_bg.png',
+			'images/success_bg.png',
+			'images/replay_btn.png',
+			'images/get_prize_btn.png',
+			'images/my_duty_list.png',
+			'images/list_item01.png',
+			'images/list_item02.png',
+			'images/list_item03.png',
+			'images/list_item04.png',
+			'images/list_item05.png',
+			'images/list_item06.png',
+			'images/list_item01_on.png',
+			'images/list_item02_on.png',
+			'images/list_item03_on.png',
+			'images/list_item04_on.png',
+			'images/list_item05_on.png',
+			'images/list_item06_on.png',
+			'images/again_btn.png',
+			'images/view_btn.png',
+			'images/go_btn.png',
+			'images/played.png',
+			'images/unplay.png',
+			'images/award_computer.png',
+			'images/award_didi.png',
+			'images/award_discount.png',
+			'images/award_kede.png',
+			'images/award_kindle.png',
+			'images/award_phone.png',
+			'images/award_zc.png',
+			'images/award_lg_bg.png',
+			'images/award_md_bg.png',
+			'images/turnplane.png',
+			'images/lottery_rules.png',
+			'images/notice_bg.png',
+			'images/get_award_btn.png',
+			'images/more_btn.png',
+			'images/my_prize_btn.png',
+			'images/get_tips.png',
+			'images/submit_btn.png',
+			'images/my_prize_btn.png',
+			'images/prize_list_bg.png',
+			'images/prize_lenovo_bg.png',
+			'images/ticket_bg.png',
+			'images/invite_sm.png',
+			'images/failed_bg2.png',
+			'images/success_bg2.png',
+			'images/continue_btn.png',
+			'images/try_btn.png',
+			'images/back_btn.png'
+		];
+		ImgPreLoad(imgArr, function(p) {
+			var percentNum = $("#percent");
+			percentNum.text(parseInt(p*100) + '%');
+			if(percentNum.text() == "100%") {
+				setTimeout(function(){
+					$("#loading").addClass('hide');
+					$("#index").removeClass('hide')
+					document.getElementById('cartoon_music').play();
+				},300);		
+			}
+		});
+		$(".startGame").on("touchstart", function() {
+			$(".duty_page").hide();
+			$(".guidepanel").show();
+		});
+		//进入第二页
+		$(".resetBtn").on("click", function() {
+			$("#index").addClass("hide");
+			$("#second_duty").removeClass("hide");
+		});
+		//查看规则
+		$(".gameRule").on("touchstart", function(event) {
+			event.stopPropagation();
+			$(".rule_page").show();
+			$(".closeBtn").on("touchstart", function() {
+				$(".rule_page").hide();
+			})
+		});
+		//查看我的奖品
+		$(".j_view").on("click", function(event) {
+			event.stopPropagation();
+			$(".prize_page").show();
+			$(".closeIcon").on("click", function() {
+				$(".prize_page").hide();
+			})
+		});
+		$(".see_btn").on("click", function() {
+			$(".lenovo_page").show();
+		});
+		$(".md_close").on("click", function() {
+			$(".lenovo_page").hide();
+		});
+		//邀请好友
+		$(".invited_btn").on("click", function(event) {
+			event.stopPropagation();
+			$(".share_page").show();
+			$(".share_page").on("click", function()　{
+				$(this).hide();
+			})
+		});
+		$(".none_page").on("click", function() {
+			$(this).hide();
+		});
+		//关闭弹出层
+		$(".close").on("click", function() {
+			$(".use_out_page").hide();
+		});
+
+		$(".list_item").not('.on').on("click", function() {
+			$(".get_change_page").show();
+		});
+		$(".get_change_page").on("click", function() {
+			$(this).hide();
+		})
+		
+	});
+	function ImgPreLoad(imgArr, progress) {
+		var complete = 0;
+		var rate = 0;
+		var imgLength = imgArr.length;
+
+		function percent() {
+			var completeProgress = complete / imgLength;
+			rate = rate + 0.01 < completeProgress ? (rate + 0.01) : completeProgress;
+			if(Math.floor(rate * 100) < 100) {
+				progress(rate);
+				setTimeout(percent, 30);
+			}else {
+				progress(1);
+			}			
+		}
+		for (var i = 0; i < imgLength; i++) {
+			var img = new Image();
+			img.onload = function() {
+				complete++;
+				if(complete == imgLength) {
+					console.log("done!");
+				}
+			}
+			img.src = imgArr[i];
+		}
+		if(progress) {
+			percent();
+		}
+	}
+</script>
+</body>
+</html>
